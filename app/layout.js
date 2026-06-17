@@ -1,9 +1,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'CoreTech | Innovative Technology Solutions',
-  description: 'CoreTech - Delivering cutting-edge technology solutions for businesses across Zimbabwe and beyond. IT Infrastructure, Software Development, Cybersecurity, Cloud Solutions.',
-  keywords: 'CoreTech, IT solutions, technology, Zimbabwe, software development, cybersecurity, cloud solutions, digital transformation',
+  title: 'CoreTech | Premium Technology Store — Laptops, Desktops, Gaming PCs & IT Solutions in Zimbabwe',
+  description: 'Shop premium laptops, desktops, gaming PCs, printers, networking equipment, and accessories at CoreTech Zimbabwe. Genuine products, manufacturer warranty, competitive pricing, and expert support.',
+  keywords: 'CoreTech, laptops Zimbabwe, desktops, gaming PCs, printers, networking, IT solutions, technology store, HP, Dell, Lenovo, ASUS',
 };
 
 export default function RootLayout({ children }) {
@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" type="image/jpeg" href="/logo.jpg" />
       </head>
       <body>{children}</body>
     </html>
