@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { EMAIL, PHONE, PHONE2, WHATSAPP, LOCATION, OWNER } from '@/lib/data';
 
 export default function Footer() {
   const handleSubscribe = (e) => {
@@ -16,11 +17,17 @@ export default function Footer() {
           <div className="footer-brand">
             <Link href="/" className="nav-logo"><Image src="/logo.jpg" alt="CoreTech" width={40} height={40} style={{ borderRadius: '8px', objectFit: 'cover' }} /><span>CoreTech</span></Link>
             <p>Zimbabwe&apos;s trusted technology store. Premium laptops, desktops, gaming PCs, networking equipment, and IT solutions.</p>
+            <div className="footer-contact-details">
+              <div className="footer-contact-item">📞 {PHONE}</div>
+              <div className="footer-contact-item">📞 {PHONE2}</div>
+              <div className="footer-contact-item">✉️ {EMAIL}</div>
+              <div className="footer-contact-item">📍 {LOCATION}</div>
+              <div className="footer-contact-item"><strong>{OWNER}</strong> — Owner</div>
+            </div>
             <div className="footer-social">
+              <a href={`https://wa.me/${WHATSAPP}`} aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">WA</a>
+              <a href={`mailto:${EMAIL}`} aria-label="Email">@</a>
               <a href="#" aria-label="Facebook">FB</a>
-              <a href="#" aria-label="Twitter">TW</a>
-              <a href="#" aria-label="LinkedIn">LI</a>
-              <a href="#" aria-label="Instagram">IG</a>
             </div>
           </div>
           <div className="footer-col"><h4>Products</h4><ul>
