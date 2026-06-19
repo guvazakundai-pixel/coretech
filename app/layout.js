@@ -1,4 +1,7 @@
 import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { WHATSAPP } from '@/lib/data';
 
 export const metadata = {
   title: 'CoreTech | Premium Technology Store — Laptops, Desktops, Gaming PCs & IT Solutions in Zimbabwe',
@@ -12,9 +15,15 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <link rel="icon" type="image/jpeg" href="/logo.jpg" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <a href={`https://wa.me/${WHATSAPP}`} className="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
+      </body>
     </html>
   );
 }
