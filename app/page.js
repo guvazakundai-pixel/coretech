@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Hero from '@/components/Hero';
 import ProductCard from '@/components/ProductCard';
 import FadeIn from '@/components/FadeIn';
-import { products, categories, brands, whyChoose, testimonials, services, faqs, WHATSAPP, EMAIL, PHONE } from '@/lib/data';
+import { products, categories, brands, whyChoose, testimonials, services, faqs, WHATSAPP, EMAIL, PHONE, PHONE2, OWNER } from '@/lib/data';
 
 export default function Home() {
   const featured = products.filter(p => p.badge === 'Best Seller' || p.badge === 'Popular' || p.badge === 'Premium').slice(0, 8);
@@ -158,8 +158,11 @@ export default function Home() {
                 <p>Visit our showroom in Harare or reach out for product inquiries, quotes, and technical support.</p>
                 <div className="contact-item"><div className="contact-item-icon">📍</div><div className="contact-item-text"><h4>Location</h4><p>Harare, Zimbabwe</p></div></div>
                 <div className="contact-item"><div className="contact-item-icon">✉️</div><div className="contact-item-text"><h4>Email</h4><p>{EMAIL}</p></div></div>
-                <div className="contact-item"><div className="contact-item-icon">📞</div><div className="contact-item-text"><h4>Phone</h4><p>{PHONE}</p></div></div>
+                <div className="contact-item"><div className="contact-item-icon">📞</div><div className="contact-item-text"><h4>Phone</h4><p>{PHONE}<br />{PHONE2}</p></div></div>
                 <div className="contact-item"><div className="contact-item-icon">🕐</div><div className="contact-item-text"><h4>Business Hours</h4><p>Mon — Fri: 8:00 AM — 5:00 PM</p></div></div>
+                <div style={{ marginTop: '16px', padding: '14px', background: 'rgba(37,99,235,0.06)', borderRadius: '12px', border: '1px solid rgba(37,99,235,0.12)' }}>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}><strong style={{ color: 'var(--text)' }}>{OWNER}</strong> — Owner</p>
+                </div>
               </div>
             </FadeIn>
             <FadeIn>
