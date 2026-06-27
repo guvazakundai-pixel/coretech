@@ -29,15 +29,16 @@ export default function ContactPage() {
                   <a href={`https://wa.me/${WHATSAPP}`} className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a>
                   <a href={`tel:${PHONE}`} className="btn btn-secondary">📞 Call Us</a>
                 </div>
-                <div style={{ marginTop: '16px', padding: '14px', background: 'rgba(37,99,235,0.06)', borderRadius: '12px', border: '1px solid rgba(37,99,235,0.12)' }}>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}><strong style={{ color: 'var(--text)' }}>{OWNER}</strong> — Owner</p>
+                <div className="contact-item" style={{ marginTop: '16px', borderColor: 'rgba(37,99,235,0.15)', background: 'rgba(37,99,235,0.05)' }}>
+                  <div className="contact-item-icon">👤</div>
+                  <div className="contact-item-text"><h4>{OWNER}</h4><p>Owner — CoreTech</p></div>
                 </div>
               </div>
             </FadeIn>
             <FadeIn>
               <form className="contact-form" action={`https://formsubmit.co/${EMAIL}`} method="POST">
-                <h3 style={{ marginBottom: '8px' }}>Send us a message</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '8px' }}>We typically respond within 2 hours</p>
+                <h3>Send us a message</h3>
+                <p>We typically respond within 2 hours</p>
                 <div className="form-row"><input type="text" name="name" placeholder="Your Name" required /><input type="phone" name="phone" placeholder="Your Phone" required /></div>
                 <input type="email" name="email" placeholder="Your Email" required />
                 <textarea name="message" placeholder="Tell us what you need — products, quantities, specifications..." required></textarea>

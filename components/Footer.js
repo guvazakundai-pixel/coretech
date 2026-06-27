@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link href="/" className="nav-logo"><Image src="/logo.jpg" alt="CoreTech" width={40} height={40} style={{ borderRadius: '8px', objectFit: 'cover' }} /><span>CoreTech</span></Link>
+            <Link href="/" className="nav-logo"><Image src="/logo.jpg" alt="CoreTech" width={40} height={40} className="nav-logo-img" /><span>CoreTech</span></Link>
             <p>Zimbabwe&apos;s trusted technology store. Premium laptops, desktops, gaming PCs, networking equipment, and IT solutions.</p>
             <div className="footer-contact-details">
               <div className="footer-contact-item">📞 {PHONE}</div>
@@ -27,7 +27,6 @@ export default function Footer() {
             <div className="footer-social">
               <a href={`https://wa.me/${WHATSAPP}`} aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">WA</a>
               <a href={`mailto:${EMAIL}`} aria-label="Email">@</a>
-              <a href="#" aria-label="Facebook">FB</a>
             </div>
           </div>
           <div className="footer-col"><h4>Products</h4><ul>
@@ -55,7 +54,7 @@ export default function Footer() {
           </ul></div>
           <div className="footer-col">
             <h4>Newsletter</h4>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '16px' }}>Get deals, tips & new product alerts.</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '14px', lineHeight: '1.6' }}>Get deals, tips & new product alerts.</p>
             <form className="newsletter-form" onSubmit={handleSubscribe}>
               <input type="email" placeholder="Your email" required />
               <button type="submit">Subscribe</button>

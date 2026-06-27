@@ -27,7 +27,7 @@ export default function Navbar() {
       <nav className={scrolled ? 'scrolled' : ''}>
         <div className="container">
           <Link href="/" className="nav-logo">
-            <Image src="/logo.jpg" alt="CoreTech" width={40} height={40} style={{ borderRadius: '8px', objectFit: 'cover' }} />
+            <Image src="/logo.jpg" alt="CoreTech" width={40} height={40} className="nav-logo-img" />
             <span>CoreTech</span>
           </Link>
           <ul className="nav-links">
@@ -73,7 +73,7 @@ export default function Navbar() {
         <Link href="/services" onClick={() => setMenuOpen(false)}>Services</Link>
         <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
         <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-        <a href={`https://wa.me/${WHATSAPP}`} className="nav-cta nav-cta-outline" style={{ marginTop: '16px' }} target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+        <a href={`https://wa.me/${WHATSAPP}`} className="nav-cta nav-cta-outline" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
         <Link href="/products" className="nav-cta nav-cta-primary" onClick={() => setMenuOpen(false)}>Shop Now →</Link>
       </div>
     </>

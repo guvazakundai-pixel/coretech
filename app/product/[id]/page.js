@@ -54,7 +54,7 @@ export default function ProductDetailPage({ params }) {
               <h1 className="product-detail-title">{p.name}</h1>
               <div className="product-rating" style={{ marginBottom: '16px' }}>
                 {Array.from({ length: 5 }, (_, j) => <span key={j} className={j < p.rating ? 'star filled' : 'star'}>★</span>)}
-                <span style={{ marginLeft: '8px', color: 'var(--text-muted)', fontSize: '0.9rem' }}>({p.reviews} reviews)</span>
+                <span style={{ marginLeft: '8px', color: 'var(--text-muted)', fontSize: '0.85rem' }}>({p.reviews} reviews)</span>
               </div>
               <div className="product-detail-price-wrap">
                 <span className="product-detail-price">${p.price.toLocaleString()}</span>

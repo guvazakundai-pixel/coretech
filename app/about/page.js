@@ -18,10 +18,10 @@ export default function AboutPage() {
             <FadeIn>
               <div className="about-content">
                 <div className="section-label" style={{ marginBottom: '16px' }}>Our Story</div>
-                <h2 style={{ fontSize: 'clamp(1.8rem,3vw,2.5rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '20px', letterSpacing: '-1px' }}>Zimbabwe&apos;s Leading <span className="highlight">Technology Retailer</span></h2>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '16px' }}>CoreTech has been serving Zimbabwe businesses and individuals with premium technology products and professional IT services for over a decade. We are authorized resellers for HP, Dell, Lenovo, ASUS, and other leading global brands.</p>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.8, marginBottom: '16px' }}>From laptops and desktops to networking infrastructure and CCTV systems, we provide end-to-end technology solutions backed by expert technical support and after-sales service.</p>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.8 }}>Our team of certified technicians and IT professionals are passionate about helping customers find the right technology solutions for their needs.</p>
+                <h2>Zimbabwe&apos;s Leading <span className="highlight">Technology Retailer</span></h2>
+                <p>CoreTech has been serving Zimbabwe businesses and individuals with premium technology products and professional IT services for over a decade. We are authorized resellers for HP, Dell, Lenovo, ASUS, and other leading global brands.</p>
+                <p>From laptops and desktops to networking infrastructure and CCTV systems, we provide end-to-end technology solutions backed by expert technical support and after-sales service.</p>
+                <p>Our team of certified technicians and IT professionals are passionate about helping customers find the right technology solutions for their needs.</p>
                 <div style={{ marginTop: '32px', display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
                   <Link href="/products" className="btn btn-primary">Browse Products →</Link>
                   <a href={`https://wa.me/${WHATSAPP}`} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">💬 Chat With Us</a>
@@ -76,7 +76,7 @@ export default function AboutPage() {
                   <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
                   <div className="testimonial-author">
                     <div className="testimonial-avatar">{t.name[0]}</div>
-                    <div className="testimonial-info"><h4>{t.name}</h4><p>{t.role}</p></div>
+                    <div className="testimonial-info"><h4>{t.name} <span className="testimonial-verified">✓ Verified</span></h4><p>{t.role}</p></div>
                   </div>
                 </div>
               </FadeIn>

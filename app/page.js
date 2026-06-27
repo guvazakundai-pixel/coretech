@@ -33,13 +33,13 @@ export default function Home() {
                 <Link href={`/products/${cat.slug}`} className="category-card">
                   <div className="category-card-image-wrap">
                     <Image src={cat.image} alt={cat.name} fill sizes="300px" />
-                    <div className="category-card-overlay" style={{ background: `linear-gradient(180deg, transparent 0%, ${cat.color}dd 100%)` }} />
+                    <div className="category-card-overlay" />
                   </div>
                   <div className="category-card-content">
-                    <div className="category-icon" style={{ background: `${cat.color}20`, color: cat.color }}>{cat.icon}</div>
+                    <div className="category-card-icon" style={{ background: `${cat.color}20`, color: cat.color }}>{cat.icon}</div>
                     <h3>{cat.name}</h3>
                     <p>{cat.desc}</p>
-                    <span className="category-count">{cat.count}</span>
+                    <span className="category-card-count">{cat.count}</span>
                   </div>
                 </Link>
               </FadeIn>
@@ -64,7 +64,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section brands-section">
+      <section className="section brands-section" id="brands">
         <div className="container">
           <FadeIn><div className="section-header"><div className="section-label">Brands We Stock</div><h2>Trusted Global Brands</h2><p>Authorized reseller for the world&apos;s leading technology brands</p></div></FadeIn>
           <div className="brands-grid">
@@ -77,7 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-alt" id="about">
+      <section className="section" id="about">
         <div className="container">
           <FadeIn><div className="section-header"><div className="section-label">Why CoreTech</div><h2>The CoreTech <span className="highlight">Advantage</span></h2><p>Why thousands of customers trust us for their technology needs</p></div></FadeIn>
           <div className="why-grid">
@@ -94,7 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt" id="testimonials">
         <div className="container">
           <FadeIn><div className="section-header"><div className="section-label">Testimonials</div><h2>What Our Clients Say</h2><p>Trusted by businesses and individuals across Zimbabwe</p></div></FadeIn>
           <div className="testimonials-grid">
@@ -105,7 +105,7 @@ export default function Home() {
                   <p className="testimonial-text">&ldquo;{t.text}&rdquo;</p>
                   <div className="testimonial-author">
                     <div className="testimonial-avatar">{t.name[0]}</div>
-                    <div className="testimonial-info"><h4>{t.name}</h4><p>{t.role}</p></div>
+                    <div className="testimonial-info"><h4>{t.name} <span className="testimonial-verified">✓ Verified</span></h4><p>{t.role}</p></div>
                   </div>
                 </div>
               </FadeIn>
@@ -160,13 +160,12 @@ export default function Home() {
                 <div className="contact-item"><div className="contact-item-icon">✉️</div><div className="contact-item-text"><h4>Email</h4><p>{EMAIL}</p></div></div>
                 <div className="contact-item"><div className="contact-item-icon">📞</div><div className="contact-item-text"><h4>Phone</h4><p>{PHONE}<br />{PHONE2}</p></div></div>
                 <div className="contact-item"><div className="contact-item-icon">🕐</div><div className="contact-item-text"><h4>Business Hours</h4><p>Mon — Fri: 8:00 AM — 5:00 PM</p></div></div>
-                <div style={{ marginTop: '16px', padding: '14px', background: 'rgba(37,99,235,0.06)', borderRadius: '12px', border: '1px solid rgba(37,99,235,0.12)' }}>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}><strong style={{ color: 'var(--text)' }}>{OWNER}</strong> — Owner</p>
-                </div>
               </div>
             </FadeIn>
             <FadeIn>
               <form className="contact-form" action={`https://formsubmit.co/${EMAIL}`} method="POST">
+                <h3>Send us a message</h3>
+                <p>We typically respond within 2 hours</p>
                 <div className="form-row"><input type="text" name="name" placeholder="Your Name" required /><input type="phone" name="phone" placeholder="Your Phone" required /></div>
                 <input type="email" name="email" placeholder="Your Email" required />
                 <textarea name="message" placeholder="Tell us what you need — products, quantities, specifications..." required></textarea>

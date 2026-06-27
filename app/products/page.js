@@ -68,7 +68,7 @@ export default function ProductsPage() {
               <input type="text" placeholder="Search by name, brand, processor, RAM..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
               <span className="search-icon">🔍</span>
             </div>
-            <div className="filter-group filter-group-wrap">
+            <div className="filter-group">
               <select value={filterCategory} onChange={e => setFilterCategory(e.target.value)}>
                 <option value="All">All Categories</option>
                 {categories.map(c => <option key={c} value={c}>{c}</option>)}
