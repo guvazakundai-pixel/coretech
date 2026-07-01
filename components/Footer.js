@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link href="/" className="nav-logo"><Image src="/logo.jpg" alt="CoreTech" width={40} height={40} className="nav-logo-img" /><span>CoreTech</span></Link>
+            <Link href="/" className="nav-logo"><Image src="/logo.png" alt="CoreTech" width={40} height={40} className="nav-logo-img" /><span>CoreTech</span></Link>
             <p>Zimbabwe&apos;s trusted technology store. Premium laptops, desktops, gaming PCs, networking equipment, and IT solutions.</p>
             <div className="footer-contact-details">
               <div className="footer-contact-item">📞 {PHONE}</div>

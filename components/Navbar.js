@@ -27,7 +27,7 @@ export default function Navbar() {
       <nav className={scrolled ? 'scrolled' : ''}>
         <div className="container">
           <Link href="/" className="nav-logo">
-            <Image src="/logo.jpg" alt="CoreTech" width={40} height={40} className="nav-logo-img" />
+            <Image src="/logo.png" alt="CoreTech" width={40} height={40} className="nav-logo-img" />
             <span>CoreTech</span>
           </Link>
           <ul className="nav-links">
